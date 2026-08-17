@@ -9,7 +9,7 @@ PW test example:
     - playwright install chromium
 
     Execution:
-    - pytest tests/test_google_search.py --headed --slowmo 500
+    - python -m pytest tests/test_bing_search.py --headed --slowmo 500
 
 Python things:
 
