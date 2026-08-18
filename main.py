@@ -5,6 +5,8 @@ print(arr)
 
 print("#" * 20)
 
+print("hello[0] = " + "hello"[0])
+print("hello"[-5])
 print("hello"[1:3])
 print("hello"[1:])
 print("hello"[1:2::]
