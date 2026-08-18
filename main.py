@@ -3,14 +3,14 @@ print(f"2 + 3 = {2 + 3}")
 arr = '1,2,3'.split(',')
 print(arr)
 
-print("#" * 20)
+print("\n" + "#" * 20 + "\n")
 
 print("hello[0] = " + "hello"[0])
-print("hello"[-5])
-print("hello"[1:3])
-print("hello"[1:])
-print("hello"[1:2::]
-print("hello"[-5:2])
+print("hello[-5] = " + "hello"[-5])
+print("hello[1:3] = " + "hello"[1:3])
+print("hello[1:] = " + "hello"[1:])
+print("hello[1:5:2] = " + "hello"[1:5:2])
+print("hello[-5:2] = " + "hello"[-5:2])
 
 msg = """a
 b
