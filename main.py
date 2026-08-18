@@ -5,6 +5,11 @@ print(arr)
 
 print("#" * 20)
 
+print("hello"[1:3])
+print("hello"[1:])
+print("hello"[1:2::]
+print("hello"[-5:2])
+
 msg = """a
 b
 c
