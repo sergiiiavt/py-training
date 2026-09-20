@@ -1,9 +1,46 @@
+from gettext import find
+
+
+print("\n" + "#" * 20 + "\n")
+class UserNotFoundError(Exception):
+    pass
+
+def get_user(user_id):
+    if user_id != 123:
+        raise UserNotFoundError("User not found")
+    return {"id": 123}
+
+try:
+    user = get_user("dasda")
+except UserNotFoundError:
+    print("User does not exist")
+
+print("\n" + "#" * 20 + "\n")
+
+
+
+print("\n" + "#" * 20 + "\n")
+
+for i in range(5):
+    print(i)
+
+print("\n" + "#" * 20 + "\n")
+
+
 print(f"2 + 3 = {2 + 3}")
 
 arr = '1,2,3'.split(',')
 print(arr)
 
 print("\n" + "#" * 20 + "\n")
+
+cart = ["apple"]
+cart2 = cart
+
+print("cart = {} cart2 = {}".format(cart, cart2))
+
+cart.append("banana")
+print("cart = {} cart2 = {}".format(cart, cart2))
 
 print("hello[0] = " + "hello"[0])
 print("hello[-5] = " + "hello"[-5])
@@ -12,6 +49,19 @@ print("hello[1:] = " + "hello"[1:])
 print("hello[1:5:2] = " + "hello"[1:5:2])
 print("hello[-5:2] = " + "hello"[-5:2])
 
+print("qqqww-eer-ttt-cc----".strip("-"))
+print("qqqww-eer-ttt-cc----".replace("-", ""))
+
+print("qqqww-eer-ttt-cc----"[::2])
+
+
+print("\n" + "#" * 20 + "\n")
+text = "qqqww-###eer-ttt-cc----"
+print("FIND: " + text[text.find("###")+3:])
+
+print("\n" + "#" * 20 + "\n")
+
+
 msg = """a
 b
 c
@@ -19,9 +69,18 @@ d
 d
 """
 
+print(msg.isalpha()) #why
+
 print(msg)
+print(msg.splitlines())
+print(msg.splitlines(keepends=True))
+print("LENGTH msg: " + str(len(msg)))
 print(type(msg))
 print(msg.count('d'))
+
+msg_split=msg.split('\n')
+print(msg_split)
+print('----'.join(msg_split))
 
 print(msg.replace('d', 'D'))
 
