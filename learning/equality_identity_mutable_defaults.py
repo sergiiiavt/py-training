@@ -1,3 +1,4 @@
+# Equality (==) compares values; identity (is) compares object identity.
 
 a = 2
 b = 2
@@ -16,6 +17,7 @@ print(c is d)
 print("#" * 20)
 
 
+# Mutable default argument examples
 def find(timeout=10, tags=[]):
     print(tags)
     return tags
@@ -29,6 +31,7 @@ print("b", b)
 find(10)
 
 
+# Alternative pattern for avoiding a shared mutable default:
 # def find1(self, timeout=10, tags=None):
 #     if tags is None:
 #         tags = []
@@ -36,11 +39,11 @@ find(10)
 
 # Demonstration of the mutable default argument bug
 def find_buggy(timeout=10, tags=[]):
-    tags.append(timeout)  # mutates the shared default list object
+    tags.append(timeout)  # Mutates the shared default list object.
     print(tags)
     return tags
 
 
 find_buggy(10)  # [10]
-find_buggy(10)  # [10, 10]  <- previous call's mutation leaked in
-find_buggy(10)  # [10, 10, 10]  <- keeps growing across calls
+find_buggy(10)  # [10, 10] <- Previous call's mutation leaked in.
+find_buggy(10)  # [10, 10, 10] <- Keeps growing across calls.

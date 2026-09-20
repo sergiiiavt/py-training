@@ -1,3 +1,5 @@
+# Examples of type annotations for common Python built-in types.
+
 age: int = 35
 print("int:", age)
 
